@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name:  svc-app
+  namespace: demo
+spec:
+  selector:
+    app: myapp
+  type:  LoadBalancer 
+  ports:
+  - name:  app
+    port:  5000
+    targetPort:  5000
